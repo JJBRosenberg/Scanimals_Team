@@ -11,6 +11,9 @@ public class ChangePages : MonoBehaviour
     [SerializeField] private GameObject firstInfoButton;
     [SerializeField] private GameObject secondInfoButton;
     [SerializeField] private GameObject thirdInfoButton;
+    [SerializeField] private GameObject backToTapScreenButton;
+    [SerializeField] private GameObject backToChildrenOrButton;
+    [SerializeField] private GameObject backToGuardianOrButton;
 
     public void TapToScanButton()
     {
@@ -42,5 +45,22 @@ public class ChangePages : MonoBehaviour
     public void thirdInfo()
     {
         thirdInfoButton.gameObject.SetActive(true);
+    }
+
+    public void backToTapScreen()
+    {
+        ChildrenOrGuardianPage.gameObject.SetActive(false);
+        TapToScanPage.gameObject.SetActive(true);
+    }
+
+    public void backToGuardian()
+    {
+        ChildrenOrGuardianPage.gameObject.SetActive(true);
+        GuardianPage.gameObject.SetActive(false);
+    }
+    public void backToChildren()
+    {
+        ChildrenOrGuardianPage.gameObject.SetActive(true);
+        ChildrenPage.gameObject.SetActive(false);
     }
 }

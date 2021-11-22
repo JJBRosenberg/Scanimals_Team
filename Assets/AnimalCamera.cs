@@ -6,7 +6,7 @@ using System.IO;
 public class AnimalCamera : MonoBehaviour
 {
 
-    //string ScreenCapDirectory = Application.persistentDataPath + "/" +  "D:\\Unity\\Scanimals_Team\\Assets.";
+    string ScreenCapDirectory = "Assets//Resources//";
     public string ScreenCapName = "CoolPic";
     public string fileType = ".png";
     private int count;
@@ -82,26 +82,20 @@ public class AnimalCamera : MonoBehaviour
     }
     public void ParrotCam()
     {
-        /*
-        var texture = new Texture2D(Screen.width, Screen.height);
-        texture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-        texture.Apply();
-
-        // Save the screenshot as a PNG file.
-        */
+        ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Parrot_Pictures" + fileType);
     }
 
-    public void BearCam()
+        public void BearCam()
     {
-        //ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Bear_Pictures" + fileType);
+        ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Bear_Pictures" + fileType);
     }
     public void ZebraCam()
     {
-        //ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Zebra_Pictures");
+        ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Zebra_Pictures" + fileType);
     }
 
     public void DolphinCam()
     {
-        //ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Dolphin_Pictures");
+        ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Dolphin_Pictures" + fileType);
     }
 }

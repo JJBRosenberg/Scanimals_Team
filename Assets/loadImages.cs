@@ -7,15 +7,13 @@ using System.IO;
 
 public class loadImages : MonoBehaviour
 {
-    /*
-    public Sprite newImage;
     private Image myIMGcomponent;
+    public string imageToLoad = "123";
     // Use this for initialization
     void Start()
     {
         myIMGcomponent = this.GetComponent<Image>();
-        myIMGcomponent.sprite = newImage;
-        myIMGcomponent.material.mainTexture = Resources.Load("123") as Texture;
+        myIMGcomponent.sprite = GetSpriteFromFile(imageToLoad);
     }
 
     // Update is called once per frame
@@ -23,7 +21,19 @@ public class loadImages : MonoBehaviour
     {
 
     }
+    /*
+    private void OnEnable()
+    {
+        myIMGcomponent.sprite = GetSpriteFromFile("123");
+    }
     */
+    public static Sprite GetSpriteFromFile(string file)
+    {
+        var res = Resources.Load(file) as Texture2D;
+        Rect rec = new Rect(0, 0, res.width, res.height);
+        return Sprite.Create(res, rec, Vector2.zero);
+    }
+    
 }
 
 

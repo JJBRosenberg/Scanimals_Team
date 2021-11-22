@@ -14,7 +14,7 @@ public class CheckTheBar : MonoBehaviour
         if (GetComponent<Image>() == true)
         {
             //bar.AddPoint();
-            Debug.Log("reeeeeeeeeeeee");
+            //Debug.Log("reeeeeeeeeeeee");
         }
     }
     private void Update()

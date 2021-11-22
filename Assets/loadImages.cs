@@ -7,7 +7,7 @@ using System.IO;
 
 public class loadImages : MonoBehaviour
 {
-
+    /*
     public Sprite newImage;
     private Image myIMGcomponent;
     // Use this for initialization
@@ -23,6 +23,7 @@ public class loadImages : MonoBehaviour
     {
 
     }
+    */
 }
 
 

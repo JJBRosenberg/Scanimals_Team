@@ -5,7 +5,8 @@ using System.IO;
 
 public class AnimalCamera : MonoBehaviour
 {
-
+    public bool Parrot;
+    public bool Bear;
     string ScreenCapDirectory = "Assets//Resources//";
     public string ScreenCapName = "CoolPic";
     public string fileType = ".png";

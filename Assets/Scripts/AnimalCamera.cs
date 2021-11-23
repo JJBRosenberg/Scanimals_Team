@@ -14,8 +14,10 @@ public class AnimalCamera : MonoBehaviour
     };
 
     bool Parrots;
-    public bool Parrot;
-    public bool Bear;
+    public bool parrot;
+    public bool bear;
+    public bool zebra;
+    public bool dolphin;
     string ScreenCapDirectory = "Assets//Resources//";
     public string ScreenCapName = "CoolPic";
     public string fileType = ".png";
@@ -23,22 +25,43 @@ public class AnimalCamera : MonoBehaviour
     private int ScreenCaps;
     public KeyCode screenCaptureKey = KeyCode.F2;
     bool[] pictures = new bool[4];
+    private KeyCode keyPress = KeyCode.F2;
 
     enum animals { PARROT, BEAR, ZEBRA, DOLPHIN}
-
+    enum animalsProgress { PARROT, BEAR, ZEBRA, DOLPHIN }
     void Start()
     {
         loadData();
-        Debug.Log(Parrot);
+        Debug.Log(bear);
         count = 0;
         ScreenCaps = 0;
         //if (!checkList["Parrot"])
             //checkList.Add("Parrot", false);
         //checkList["Parrot"] = false;
     }
+    
+    public bool checAnimalProgress(int animal)
+    {
+        switch((animalsProgress)animal)
+        {
+            case animalsProgress.PARROT:
+                return parrot;
+                    break;
 
+            case animalsProgress.BEAR:
+                return bear;
+                break;
 
-   
+            case animalsProgress.ZEBRA:
+                return zebra;
+                break;
+
+            case animalsProgress.DOLPHIN:
+                return dolphin;
+                break;
+        }
+        return false;
+    }
     int FindScreenCaptures(string DirectoryPath, string FileName)
     {
         //Set count to 0 at every run so we count up from 0 to 
@@ -99,32 +122,37 @@ public class AnimalCamera : MonoBehaviour
     }   
     public void ParrotCam()
     {
-        Parrot = true;
-        Debug.Log(Parrot);
+        parrot = true;
+        Debug.Log(parrot);
         ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Parrot_Pictures" + fileType);
-        PlayerPrefs.SetInt("Parrot", (Parrot ? 1 : 0));
+        PlayerPrefs.SetInt("Parrot", (parrot ? 1 : 0));
         //Parrot = true;
         //Parrot = (PlayerPrefs.GetInt("Parrot") != 0);
-        Debug.Log(Parrot);
-    }
-    void loadData()
-    {
-         Parrot = intToBool(PlayerPrefs.GetInt("Parrot"));
+        Debug.Log(parrot);
     }
         public void BearCam()
     {
-
-        Debug.Log("aaaaaaaaaaaaaa");
+        bear = true;
         ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Bear_Pictures" + fileType);
+        PlayerPrefs.SetInt("Bear", (bear ? 1 : 0));
     }
     public void ZebraCam()
     {
+        zebra = true;
         ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Zebra_Pictures" + fileType);
+        PlayerPrefs.SetInt("Zebra", (zebra ? 1 : 0));
     }
 
     public void DolphinCam()
     {
+        dolphin = true;
         ScreenCapture.CaptureScreenshot(ScreenCapDirectory + "Dolphin_Pictures" + fileType);
+        PlayerPrefs.SetInt("Dolphin", (dolphin ? 1 : 0));
+    }
+
+    private void ClearAchievements()
+    {
+
     }
     private void Update()
     {
@@ -133,6 +161,15 @@ public class AnimalCamera : MonoBehaviour
         //Debug.Log(Parrots);
         //Debug.Log(Parrot);
         //If we press our capture key
+
+        if (Input.GetKeyDown(keyPress))
+        {
+            PlayerPrefs.SetInt("Parrot", 0);
+            PlayerPrefs.SetInt("Bear", 0);
+            PlayerPrefs.SetInt("Zebra", 0);
+            PlayerPrefs.SetInt("Dolphin", 0);
+        }
+
         if (Input.GetKeyDown(screenCaptureKey))
         {
             //This is how you save the screenshot to a certain directory and a certain name
@@ -142,5 +179,12 @@ public class AnimalCamera : MonoBehaviour
             Debug.Log("ScreenCapture Taken!");
             //Debug.Log("ScreenCap Location: " + ScreenCapDirectory);
         }
+    }
+    void loadData()
+    {
+        parrot = intToBool(PlayerPrefs.GetInt("Parrot"));
+        bear = intToBool(PlayerPrefs.GetInt("Bear"));
+        zebra = intToBool(PlayerPrefs.GetInt("Zebra"));
+        dolphin = intToBool(PlayerPrefs.GetInt("Dolphin"));
     }
 }

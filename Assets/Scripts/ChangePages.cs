@@ -5,9 +5,11 @@ using UnityEngine;
 public class ChangePages : MonoBehaviour
 {
     [SerializeField] private GameObject TapToScanPage;
+    [SerializeField] private GameObject TaskScreen;
     [SerializeField] private GameObject ChildrenOrGuardianPage;
     [SerializeField] private GameObject ChildrenPage;
     [SerializeField] private GameObject GuardianPage;
+    [SerializeField] private GameObject bothPanelScreen;
     [SerializeField] private GameObject firstInfoButton;
     [SerializeField] private GameObject secondInfoButton;
     [SerializeField] private GameObject thirdInfoButton;
@@ -32,7 +34,7 @@ public class ChangePages : MonoBehaviour
     public void TapForChildren()
     {
         ChildrenOrGuardianPage.gameObject.SetActive(false);
-        ChildrenPage.gameObject.SetActive(true);
+        bothPanelScreen.gameObject.SetActive(true);
     }
     public void TapForGuardian()
     {
@@ -61,6 +63,30 @@ public class ChangePages : MonoBehaviour
         TapToScanPage.gameObject.SetActive(true);
     }
 
+    public void backToBothPanel()
+    {
+        mapOrAnimalScreen.gameObject.SetActive(false);
+        bothPanelScreen.gameObject.SetActive(true);
+    }
+
+    public void backToMapOrAnimalScreen()
+    {
+        mapOrAnimalScreen.gameObject.SetActive(true);
+        animalScreen.gameObject.SetActive(false);
+    }
+
+    public void toTask()
+    {
+        mapOrAnimalScreen.gameObject.SetActive(false);
+        TaskScreen.gameObject.SetActive(true);
+    }
+
+    public void toTapScreen()
+    {
+        mapOrAnimalScreen.gameObject.SetActive(false);
+
+    }
+
     public void backToGuardian()
     {
         ChildrenOrGuardianPage.gameObject.SetActive(true);
@@ -69,7 +95,7 @@ public class ChangePages : MonoBehaviour
     public void backToChildren()
     {
         ChildrenOrGuardianPage.gameObject.SetActive(true);
-        ChildrenPage.gameObject.SetActive(false);
+        bothPanelScreen.gameObject.SetActive(false);
     }
     public void Activate()
     {
@@ -80,7 +106,7 @@ public class ChangePages : MonoBehaviour
 
     public void MapOrAnimal()
     {
-        secondScreen.gameObject.SetActive(false);
+        bothPanelScreen.gameObject.SetActive(false);
         mapOrAnimalScreen.gameObject.SetActive(true);
     }
 

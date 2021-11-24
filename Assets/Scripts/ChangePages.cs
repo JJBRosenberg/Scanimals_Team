@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangePages : MonoBehaviour
 {
+    [SerializeField] private GameObject parentPanel;
     [SerializeField] private GameObject parrotInfoPage;
     [SerializeField] private GameObject bearInfoPage;
     [SerializeField] private GameObject zebraInfoPage;
@@ -197,6 +198,7 @@ public class ChangePages : MonoBehaviour
     {
         GuardianPage.gameObject.SetActive(false);
         WelcomeGuardianPage.gameObject.SetActive(true);
+        //parentPanel.transform.position = new Vector3(-116.0f, 0.0f, 0.0f);
     }
 
     IEnumerator wait()

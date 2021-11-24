@@ -23,7 +23,6 @@ public class AnimalCamera : MonoBehaviour
     public string fileType = ".png";
     private int count;
     private int ScreenCaps;
-    public KeyCode screenCaptureKey = KeyCode.F2;
     bool[] pictures = new bool[4];
     private KeyCode keyPress = KeyCode.F2;
 
@@ -40,28 +39,6 @@ public class AnimalCamera : MonoBehaviour
         //checkList["Parrot"] = false;
     }
     
-    public bool checAnimalProgress(int animal)
-    {
-        switch((animalsProgress)animal)
-        {
-            case animalsProgress.PARROT:
-                return parrot;
-                    break;
-
-            case animalsProgress.BEAR:
-                return bear;
-                break;
-
-            case animalsProgress.ZEBRA:
-                return zebra;
-                break;
-
-            case animalsProgress.DOLPHIN:
-                return dolphin;
-                break;
-        }
-        return false;
-    }
     int FindScreenCaptures(string DirectoryPath, string FileName)
     {
         //Set count to 0 at every run so we count up from 0 to 
@@ -150,10 +127,6 @@ public class AnimalCamera : MonoBehaviour
         PlayerPrefs.SetInt("Dolphin", (dolphin ? 1 : 0));
     }
 
-    private void ClearAchievements()
-    {
-
-    }
     private void Update()
     {
         //ScreenCaps = (FindScreenCaptures(ScreenCapDirectory, ScreenCapName));
@@ -168,17 +141,9 @@ public class AnimalCamera : MonoBehaviour
             PlayerPrefs.SetInt("Bear", 0);
             PlayerPrefs.SetInt("Zebra", 0);
             PlayerPrefs.SetInt("Dolphin", 0);
+            Debug.Log("Deleted Achivements");
         }
 
-        if (Input.GetKeyDown(screenCaptureKey))
-        {
-            //This is how you save the screenshot to a certain directory and a certain name
-            //(ScreenCaps + 1): We reference this from above and use it for our picture name
-            //                  So if we know 2 files exist we add 1 to our value so it is a new picture.
-            //ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + (ScreenCaps + 1) + fileType);
-            Debug.Log("ScreenCapture Taken!");
-            //Debug.Log("ScreenCap Location: " + ScreenCapDirectory);
-        }
     }
     void loadData()
     {

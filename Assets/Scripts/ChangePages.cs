@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class ChangePages : MonoBehaviour
 {
+    [SerializeField] private GameObject parrotInfoPage;
+    [SerializeField] private GameObject bearInfoPage;
+    [SerializeField] private GameObject zebraInfoPage;
+    [SerializeField] private GameObject dolphinInfoPage;
     [SerializeField] private GameObject TapToScanPage;
     [SerializeField] private GameObject TaskScreen;
     [SerializeField] private GameObject ChildrenOrGuardianPage;
     [SerializeField] private GameObject ChildrenPage;
     [SerializeField] private GameObject GuardianPage;
+    [SerializeField] private GameObject WelcomeGuardianPage;
     [SerializeField] private GameObject bothPanelScreen;
     [SerializeField] private GameObject firstInfoButton;
     [SerializeField] private GameObject secondInfoButton;
@@ -45,6 +50,22 @@ public class ChangePages : MonoBehaviour
     public void firstInfo()
     {
         firstInfoButton.gameObject.SetActive(true);
+    }
+
+    public void backToMapFromTask()
+    {
+        TaskScreen.gameObject.SetActive(false);
+        mapOrAnimalScreen.gameObject.SetActive(true);
+    }
+
+    public void backToAnimalScreen()
+    {
+        parrotInfoPage.gameObject.SetActive(false);
+        bearInfoPage.gameObject.SetActive(false);
+        zebraInfoPage.gameObject.SetActive(false);
+        dolphinInfoPage.gameObject.SetActive(false);
+        animalScreen.gameObject.SetActive(true);
+
     }
 
     public void secondInfo()
@@ -128,26 +149,56 @@ public class ChangePages : MonoBehaviour
         switch((animals)someValue)
         {
             case (animals.PARROT):
-                pages.PickParrot();
+                animalScreen.gameObject.SetActive(false);
+                parrotInfoPage.gameObject.SetActive(true);
+                
                 break;
 
             case (animals.BEAR):
-                pages.PickBear();
+                animalScreen.gameObject.SetActive(false);
+                bearInfoPage.gameObject.SetActive(true);
+                
                 break;
 
             case (animals.ZEBRA):
-                pages.PickZebra();
+                animalScreen.gameObject.SetActive(false);
+                zebraInfoPage.gameObject.SetActive(true);
+                
                 break;
 
                 case(animals.DOLPHIN):
-                pages.PickDolphin();
+                animalScreen.gameObject.SetActive(false);
+                dolphinInfoPage.gameObject.SetActive(true);
+                
                 break;
 
 
         }
     }
 
-    
+    public void takeParrotPic()
+    {
+        pages.PickParrot();
+    }
+    public void takeBearPic()
+    {
+        pages.PickBear();
+    }
+    public void takeZebraPic()
+    {
+        pages.PickZebra();
+    }
+    public void takeDolphinPic()
+    {
+        pages.PickDolphin();
+    }
+
+    public void WelcomeGuardian()
+    {
+        GuardianPage.gameObject.SetActive(false);
+        WelcomeGuardianPage.gameObject.SetActive(true);
+    }
+
     IEnumerator wait()
     {
         firstScreen.gameObject.SetActive(true);

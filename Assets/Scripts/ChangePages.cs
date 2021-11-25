@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangePages : MonoBehaviour
 {
+    [SerializeField] private GameObject quizScreen;
     [SerializeField] private GameObject parentPanel;
     [SerializeField] private GameObject parrotInfoPage;
     [SerializeField] private GameObject bearInfoPage;
@@ -199,6 +200,12 @@ public class ChangePages : MonoBehaviour
         GuardianPage.gameObject.SetActive(false);
         WelcomeGuardianPage.gameObject.SetActive(true);
         //parentPanel.transform.position = new Vector3(-116.0f, 0.0f, 0.0f);
+    }
+
+    public void toQuiz()
+    {
+        mapOrAnimalScreen.gameObject.SetActive(false);
+        quizScreen.gameObject.SetActive(true);
     }
 
     IEnumerator wait()

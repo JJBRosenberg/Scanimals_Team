@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangePages : MonoBehaviour
 {
+    [SerializeField] private GameObject startScreen;
     [SerializeField] private GameObject parrotInfoPage;
     [SerializeField] private GameObject bearInfoPage;
     [SerializeField] private GameObject zebraInfoPage;
@@ -45,6 +46,12 @@ public class ChangePages : MonoBehaviour
     {
         ChildrenOrGuardianPage.gameObject.SetActive(false);
         GuardianPage.gameObject.SetActive(true);
+    }
+
+    public void StartToTap()
+    {
+        startScreen.gameObject.SetActive(false);
+        TapToScanPage.gameObject.SetActive(true);
     }
 
     public void firstInfo()

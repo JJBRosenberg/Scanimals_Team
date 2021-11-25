@@ -25,7 +25,7 @@ public class ParentPage : MonoBehaviour
             panelPressed = false;
         }
     }
-
+    /*
     void Update()
     {
         
@@ -34,4 +34,5 @@ public class ParentPage : MonoBehaviour
         else if (droppy.value == 2) imageChanger.sprite = location3;
 
     }
+    */
 }

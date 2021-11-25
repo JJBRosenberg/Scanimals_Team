@@ -17,22 +17,20 @@ public class ParentPage : MonoBehaviour
     {
         if (!panelPressed)
         {
+            Debug.Log("reee");
             parentPanel.transform.position += new Vector3(200.0f, 0.0f, 0.0f);
             panelPressed = true;
         } else
         {
+            Debug.Log("roooo");
             parentPanel.transform.position -= new Vector3(200.0f, 0.0f, 0.0f);
             panelPressed = false;
         }
     }
-    /*
+    
     void Update()
     {
         
-        if (droppy.value == 0) imageChanger.sprite = location1;
-        else if (droppy.value == 1) imageChanger.sprite = location2;
-        else if (droppy.value == 2) imageChanger.sprite = location3;
-
     }
-    */
+    
 }

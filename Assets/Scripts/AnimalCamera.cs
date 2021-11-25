@@ -149,6 +149,7 @@ public class AnimalCamera : MonoBehaviour
     {
         parrot = intToBool(PlayerPrefs.GetInt("Parrot"));
         bear = intToBool(PlayerPrefs.GetInt("Bear"));
+        Debug.Log("Bear true" + bear);
         zebra = intToBool(PlayerPrefs.GetInt("Zebra"));
         dolphin = intToBool(PlayerPrefs.GetInt("Dolphin"));
     }

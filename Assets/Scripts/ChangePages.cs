@@ -115,6 +115,12 @@ public class ChangePages : MonoBehaviour
 
     }
 
+    public void backToHome()
+    {
+        WelcomeGuardianPage.gameObject.SetActive(false);
+        ChildrenOrGuardianPage.gameObject.SetActive(true);
+    }
+
     public void backToGuardian()
     {
         ChildrenOrGuardianPage.gameObject.SetActive(true);

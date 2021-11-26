@@ -192,18 +192,22 @@ public class ChangePages : MonoBehaviour
     public void takeParrotPic()
     {
         pages.PickParrot();
+        parrotInfoPage.gameObject.SetActive(false);
     }
     public void takeBearPic()
     {
         pages.PickBear();
+        bearInfoPage.gameObject.SetActive(false);
     }
     public void takeZebraPic()
     {
         pages.PickZebra();
+        zebraInfoPage.gameObject.SetActive(false);
     }
     public void takeDolphinPic()
     {
         pages.PickDolphin();
+        dolphinInfoPage.gameObject.SetActive(false);
     }
 
     public void WelcomeGuardian()

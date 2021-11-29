@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangePages : MonoBehaviour
 {
+    [SerializeField] private GameObject quizScreen;
     [SerializeField] private GameObject startScreen;
     [SerializeField] private GameObject parrotInfoPage;
     [SerializeField] private GameObject bearInfoPage;
@@ -113,6 +114,13 @@ public class ChangePages : MonoBehaviour
     {
         mapOrAnimalScreen.gameObject.SetActive(false);
 
+    }
+
+    public void toQuiz()
+    {
+        mapOrAnimalScreen.gameObject.SetActive(false);
+        quizScreen.gameObject.SetActive(true);
+        
     }
 
     public void backToHome()

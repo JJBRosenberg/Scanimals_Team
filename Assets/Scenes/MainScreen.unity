@@ -1015,7 +1015,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Beer
+  m_Text: Stokstaartje
 --- !u!222 &72441501
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3414,7 +3414,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Zebra
+  m_Text: Leeuw
 --- !u!222 &255782094
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5491,7 +5491,7 @@ GameObject:
   - component: {fileID: 431844984}
   - component: {fileID: 431844986}
   m_Layer: 5
-  m_Name: Zebra
+  m_Name: Lion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12157,7 +12157,7 @@ GameObject:
   - component: {fileID: 1087158520}
   - component: {fileID: 1087158519}
   m_Layer: 5
-  m_Name: Bear
+  m_Name: Meerkat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18004,7 +18004,7 @@ GameObject:
   - component: {fileID: 1579019373}
   - component: {fileID: 1579019372}
   m_Layer: 5
-  m_Name: BearButton
+  m_Name: MeerkatButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23305,7 +23305,7 @@ GameObject:
   - component: {fileID: 2059968853}
   - component: {fileID: 2059968852}
   m_Layer: 5
-  m_Name: ZebraButton
+  m_Name: LionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

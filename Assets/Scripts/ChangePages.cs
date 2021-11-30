@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChangePages : MonoBehaviour
 {
+    [SerializeField] private GameObject startParentScreen;
+    [SerializeField] private GameObject charityScreen;
     [SerializeField] private GameObject mapScreen;
     [SerializeField] private GameObject quizScreen;
     [SerializeField] private GameObject startScreen;
@@ -56,6 +58,17 @@ public class ChangePages : MonoBehaviour
         TapToScanPage.gameObject.SetActive(true);
     }
 
+    public void toCharityScreen()
+    {
+        charityScreen.gameObject.SetActive(true);
+        startParentScreen.gameObject.SetActive(false);
+    }
+
+    public void toStartParentScreen()
+    {
+        startParentScreen.gameObject.SetActive(true);
+        charityScreen.gameObject.SetActive(false);
+    }
     public void firstInfo()
     {
         firstInfoButton.gameObject.SetActive(true);

@@ -18,19 +18,16 @@ public class changeMap : MonoBehaviour
         if (myDrop.value == 0)
         {
             thisMap.texture = maps;
-            Debug.Log("reee");
         }
 
         if (myDrop.value == 1)
         {
             thisMap.texture = maps1;
-            Debug.Log("yeeeeee");
         }
 
         if (myDrop.value == 2)
         {
             thisMap.texture = maps2;
-            Debug.Log("neeeeeeeeee");
         }
     }
 }

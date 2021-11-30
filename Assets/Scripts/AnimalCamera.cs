@@ -31,7 +31,7 @@ public class AnimalCamera : MonoBehaviour
     void Start()
     {
         loadData();
-        Debug.Log(bear);
+        
         count = 0;
         ScreenCaps = 0;
         //if (!checkList["Parrot"])
@@ -149,7 +149,6 @@ public class AnimalCamera : MonoBehaviour
     {
         parrot = intToBool(PlayerPrefs.GetInt("Parrot"));
         bear = intToBool(PlayerPrefs.GetInt("Bear"));
-        Debug.Log("Bear true" + bear);
         zebra = intToBool(PlayerPrefs.GetInt("Zebra"));
         dolphin = intToBool(PlayerPrefs.GetInt("Dolphin"));
     }

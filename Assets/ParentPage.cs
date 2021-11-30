@@ -17,12 +17,10 @@ public class ParentPage : MonoBehaviour
     {
         if (!panelPressed)
         {
-            Debug.Log("reee");
             parentPanel.transform.position += new Vector3(200.0f, 0.0f, 0.0f);
             panelPressed = true;
         } else
         {
-            Debug.Log("roooo");
             parentPanel.transform.position -= new Vector3(200.0f, 0.0f, 0.0f);
             panelPressed = false;
         }

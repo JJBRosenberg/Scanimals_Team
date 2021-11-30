@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangePages : MonoBehaviour
 {
+    [SerializeField] private GameObject animalScreenKids;
     [SerializeField] private GameObject startParentScreen;
     [SerializeField] private GameObject charityScreen;
     [SerializeField] private GameObject mapScreen;
@@ -60,13 +61,22 @@ public class ChangePages : MonoBehaviour
 
     public void toCharityScreen()
     {
+        animalScreenKids.gameObject.SetActive(false);
         charityScreen.gameObject.SetActive(true);
         startParentScreen.gameObject.SetActive(false);
     }
 
     public void toStartParentScreen()
     {
+        animalScreenKids.gameObject.SetActive(false);
         startParentScreen.gameObject.SetActive(true);
+        charityScreen.gameObject.SetActive(false);
+    }
+
+    public void toAnimalScreenKids()
+    {
+        animalScreenKids.gameObject.SetActive(true);
+        startParentScreen.gameObject.SetActive(false);
         charityScreen.gameObject.SetActive(false);
     }
     public void firstInfo()

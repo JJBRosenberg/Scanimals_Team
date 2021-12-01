@@ -11,6 +11,7 @@ public class ChangePages : MonoBehaviour
     bool mapChanged = false;
     [SerializeField] private GameObject tutorialSCreen;
     [SerializeField]  Image[] tutorialButtons;
+    [SerializeField] private GameObject medaile;
     [SerializeField] private GameObject thirdAnimalScreen;
     [SerializeField] private GameObject firstAnimalScreen;
     [SerializeField] private GameObject secondAnimalScreen;
@@ -138,6 +139,12 @@ public class ChangePages : MonoBehaviour
         charityScreen.gameObject.SetActive(false);
     }
 
+    public void toMedail()
+    {
+        animalScreen.gameObject.SetActive(false);
+        medaile.gameObject.SetActive(true);
+    }
+
     public void secondLibraryPage()
     {
         kidsScreen.gameObject.SetActive(false);
@@ -249,7 +256,7 @@ public class ChangePages : MonoBehaviour
     {
         mapOrAnimalScreen.gameObject.SetActive(false);
         kidsMapScreen.gameObject.SetActive(true);
-
+        medaile.gameObject.SetActive(false);
     }
 
     public void toggleMap()
@@ -301,6 +308,7 @@ public class ChangePages : MonoBehaviour
     {
         kidsMapScreen.gameObject.SetActive(false);
         animalScreen.gameObject.SetActive(true);
+        medaile.gameObject.SetActive(false);
     }
 
     public void toParentPage()

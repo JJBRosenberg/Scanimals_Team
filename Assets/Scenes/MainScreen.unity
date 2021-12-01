@@ -534,7 +534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &21259004
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3964,7 +3964,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 815889897}
         m_TargetAssemblyTypeName: ChangePages, Assembly-CSharp
-        m_MethodName: TapToScanButton
+        m_MethodName: fromMapToAnimal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5656,7 +5656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &221854703
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8318,7 +8318,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 815889897}
         m_TargetAssemblyTypeName: ChangePages, Assembly-CSharp
-        m_MethodName: TapToScanButton
+        m_MethodName: GoToKidsScreenMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23442,6 +23442,7 @@ MonoBehaviour:
   - {fileID: 1721156204}
   - {fileID: 1549639241}
   - {fileID: 609445638}
+  medaile: {fileID: 21259003}
   thirdAnimalScreen: {fileID: 1533216135}
   firstAnimalScreen: {fileID: 1646343747}
   secondAnimalScreen: {fileID: 353521109}
@@ -53766,7 +53767,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 815889897}
         m_TargetAssemblyTypeName: ChangePages, Assembly-CSharp
-        m_MethodName: TapToScanButton
+        m_MethodName: toMedail
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

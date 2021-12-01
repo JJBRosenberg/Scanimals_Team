@@ -71,6 +71,8 @@ public class ChangePages : MonoBehaviour
 
     public void toCharityScreen()
     {
+        kidsScreen.gameObject.SetActive(false);
+        secondKidScreen.gameObject.SetActive(false);
         goKidsScreen.gameObject.SetActive(false);
         kidsScreen.gameObject.SetActive(false);
         animalScreenKids.gameObject.SetActive(false);
@@ -159,7 +161,6 @@ public class ChangePages : MonoBehaviour
 
     public void KidsScreeny()
     {
-
         kidsScreen.gameObject.SetActive(false);
         startParentScreen.gameObject.SetActive(false);
         charityScreen.gameObject.SetActive(false);

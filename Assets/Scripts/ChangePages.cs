@@ -227,12 +227,14 @@ public class ChangePages : MonoBehaviour
         TaskScreen.gameObject.SetActive(false);
         tutorial2.gameObject.SetActive(false);
         tutorial3.gameObject.SetActive(false);
+        kidsMapScreen.gameObject.SetActive(false);  
     }
 
     public void GoToKidsScreenMap()
     {
         mapOrAnimalScreen.gameObject.SetActive(false);
         kidsMapScreen.gameObject.SetActive(true);
+
     }
 
     public void toggleMap()
@@ -264,6 +266,7 @@ public class ChangePages : MonoBehaviour
         TaskScreen.gameObject.SetActive(false);
         tutorial2.gameObject.SetActive(false);
         tutorial3.gameObject.SetActive(false);
+        kidsMapScreen.gameObject.SetActive(false);
     }
 
     public void toParentPage()

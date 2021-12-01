@@ -10,6 +10,8 @@ public class ChangePages : MonoBehaviour
     bool showImages3 = false;
     [SerializeField] private GameObject tutorialSCreen;
     [SerializeField]  Image[] tutorialButtons;
+    [SerializeField] private GameObject kidsScreen;
+    [SerializeField] private GameObject secondKidScreen;
     [SerializeField] private GameObject goKidsScreen;
     [SerializeField] private GameObject welcomeParentScreen;
     [SerializeField] private GameObject animalScreenKids;
@@ -69,6 +71,8 @@ public class ChangePages : MonoBehaviour
 
     public void toCharityScreen()
     {
+        goKidsScreen.gameObject.SetActive(false);
+        kidsScreen.gameObject.SetActive(false);
         animalScreenKids.gameObject.SetActive(false);
         charityScreen.gameObject.SetActive(true);
         startParentScreen.gameObject.SetActive(false);
@@ -76,13 +80,26 @@ public class ChangePages : MonoBehaviour
 
     public void toStartParentScreen()
     {
+        goKidsScreen.gameObject.SetActive(false);
         animalScreenKids.gameObject.SetActive(false);
         startParentScreen.gameObject.SetActive(true);
         charityScreen.gameObject.SetActive(false);
     }
 
+    public void secondLibraryPage()
+    {
+        kidsScreen.gameObject.SetActive(false);
+        secondKidScreen.gameObject.SetActive(true);
+    }
+
+    public void firstLibraryPage()
+    {
+        kidsScreen.gameObject.SetActive(true);
+        secondKidScreen.gameObject.SetActive(false);
+    }
     public void toAnimalScreenKids()
     {
+        goKidsScreen.gameObject.SetActive(false);
         animalScreenKids.gameObject.SetActive(true);
         startParentScreen.gameObject.SetActive(false);
         charityScreen.gameObject.SetActive(false);
@@ -130,9 +147,20 @@ public class ChangePages : MonoBehaviour
         bothPanelScreen.gameObject.SetActive(true);
     }
 
+
+    public void goKidsPage()
+    {
+        kidsScreen.gameObject.SetActive(true);
+        startParentScreen.gameObject.SetActive(false);
+        charityScreen.gameObject.SetActive(false);
+        animalScreen.gameObject.SetActive(false);
+        goKidsScreen.gameObject.SetActive(false);
+    }
+
     public void KidsScreeny()
     {
 
+        kidsScreen.gameObject.SetActive(false);
         startParentScreen.gameObject.SetActive(false);
         charityScreen.gameObject.SetActive(false);
         animalScreen.gameObject.SetActive(false);
@@ -141,6 +169,7 @@ public class ChangePages : MonoBehaviour
 
     public void goParentMap()
     {
+        kidsScreen.gameObject.SetActive(false);
         startParentScreen.gameObject.SetActive(true);
         charityScreen.gameObject.SetActive(false);
         animalScreen.gameObject.SetActive(false);

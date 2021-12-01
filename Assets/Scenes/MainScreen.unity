@@ -3008,7 +3008,7 @@ RectTransform:
   - {fileID: 1658811152}
   - {fileID: 1465237892}
   m_Father: {fileID: 1466782458}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3505,7 +3505,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 239449372}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5656,7 +5656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &221854703
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6498,7 +6498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &239449372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6511,6 +6511,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1466782458}
+  - {fileID: 1813771695}
   - {fileID: 125423903}
   - {fileID: 1236547954}
   - {fileID: 682466772}
@@ -19544,7 +19545,7 @@ RectTransform:
   - {fileID: 766738214}
   - {fileID: 287319141}
   m_Father: {fileID: 239449372}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -28080,7 +28081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &972327467
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35394,7 +35395,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 239449372}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -40998,7 +40999,6 @@ RectTransform:
   m_Children:
   - {fileID: 625599917}
   - {fileID: 1432655918}
-  - {fileID: 1813771695}
   - {fileID: 99184408}
   m_Father: {fileID: 239449372}
   m_RootOrder: 0
@@ -50522,8 +50522,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1124025879}
-  m_Father: {fileID: 1466782458}
-  m_RootOrder: 2
+  m_Father: {fileID: 239449372}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -50576,7 +50576,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 815889897}
         m_TargetAssemblyTypeName: ChangePages, Assembly-CSharp
-        m_MethodName: backToBothPanel
+        m_MethodName: KidsScreeny
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -55025,7 +55025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1983019364
 RectTransform:
   m_ObjectHideFlags: 0

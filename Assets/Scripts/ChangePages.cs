@@ -227,6 +227,7 @@ public class ChangePages : MonoBehaviour
         goKidsScreen.gameObject.SetActive(true);
         approved.gameObject.SetActive(false);
         disproved.gameObject.SetActive(false);
+        startParentScreen.gameObject.SetActive(false);
     }
 
     public void goParentMap()

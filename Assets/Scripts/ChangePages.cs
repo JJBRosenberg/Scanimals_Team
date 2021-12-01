@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChangePages : MonoBehaviour
 {
+    bool showImages1 = false;
+    bool showImages2 = false;
+    bool showImages3 = false;
+    [SerializeField]  Image[] tutorialButtons;
     [SerializeField] private GameObject animalScreenKids;
     [SerializeField] private GameObject startParentScreen;
     [SerializeField] private GameObject charityScreen;
@@ -126,6 +131,27 @@ public class ChangePages : MonoBehaviour
     {
         mapOrAnimalScreen.gameObject.SetActive(true);
         animalScreen.gameObject.SetActive(false);
+    }
+
+    public void toParentPage()
+    {
+        if(showImages1 == false)
+        {
+            showImages1 = true;
+            tutorialButtons[0].gameObject.SetActive(true);
+        } else if (showImages2 == false)
+        {
+            showImages2 = true;
+            tutorialButtons[1].gameObject.SetActive(true);
+        } else if (showImages3 == false)
+        {
+            showImages3 = true;
+            tutorialButtons[2].gameObject.SetActive(true);
+        } else
+        {
+            ChildrenOrGuardianPage.gameObject.SetActive(false);
+            WelcomeGuardianPage.gameObject.SetActive(true);
+        }
     }
 
     public void toMapScreen()

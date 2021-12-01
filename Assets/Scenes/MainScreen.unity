@@ -16718,7 +16718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &635570742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21621,6 +21621,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4452429c14599d24d9324b78638417ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialButtons:
+  - {fileID: 1721156204}
+  - {fileID: 1549639241}
+  - {fileID: 609445638}
   animalScreenKids: {fileID: 972327466}
   startParentScreen: {fileID: 239449371}
   charityScreen: {fileID: 542556120}
@@ -50880,7 +50884,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 815889897}
         m_TargetAssemblyTypeName: ChangePages, Assembly-CSharp
-        m_MethodName: TapToScanButton
+        m_MethodName: toParentPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -51097,7 +51101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1983019364
 RectTransform:
   m_ObjectHideFlags: 0

@@ -8,8 +8,14 @@ public class ChangePages : MonoBehaviour
     bool showImages1 = false;
     bool showImages2 = false;
     bool showImages3 = false;
+    bool mapChanged = false;
     [SerializeField] private GameObject tutorialSCreen;
     [SerializeField]  Image[] tutorialButtons;
+    [SerializeField] private GameObject mapPic;
+    [SerializeField] private GameObject mapINfo;
+    [SerializeField] private GameObject kidsMapScreen;
+    [SerializeField] private GameObject tutorial2;
+    [SerializeField] private GameObject tutorial3;
     [SerializeField] private GameObject approved;
     [SerializeField] private GameObject disproved;
     [SerializeField] private GameObject parrotScreen;
@@ -48,6 +54,19 @@ public class ChangePages : MonoBehaviour
     public AnimalPages pages;
     private string Parrot = "parrot";
 
+
+    public void NewTutorial()
+    {
+        TaskScreen.gameObject.SetActive(false);
+        tutorial2.gameObject.SetActive(true);
+    }
+
+    public void NewTutorial2()
+    {
+        TaskScreen.gameObject.SetActive(false);
+        tutorial2.gameObject.SetActive(false);
+        tutorial3.gameObject.SetActive(true);
+    }
 
     public void Approved()
     {
@@ -202,8 +221,49 @@ public class ChangePages : MonoBehaviour
     }
     public void backToMapOrAnimalScreen()
     {
+        ChildrenOrGuardianPage.gameObject.SetActive(false);
         mapOrAnimalScreen.gameObject.SetActive(true);
         animalScreen.gameObject.SetActive(false);
+        TaskScreen.gameObject.SetActive(false);
+        tutorial2.gameObject.SetActive(false);
+        tutorial3.gameObject.SetActive(false);
+    }
+
+    public void GoToKidsScreenMap()
+    {
+        mapOrAnimalScreen.gameObject.SetActive(false);
+        kidsMapScreen.gameObject.SetActive(true);
+    }
+
+    public void toggleMap()
+    {
+        if(!mapChanged)
+        {
+            mapPic.gameObject.SetActive(false);
+            mapINfo.gameObject.SetActive(true);
+            mapChanged = true;
+            Debug.Log("yooooo");
+            Debug.Log(mapChanged);
+        }
+
+        else if (mapChanged = true)
+        {
+            mapPic.gameObject.SetActive(true);
+            mapINfo.gameObject.SetActive(false);
+            mapChanged = false;
+            Debug.Log("yeet");
+        }
+    }
+
+    public void tochildrenOrGuardianPage()
+    {
+
+        ChildrenOrGuardianPage.gameObject.SetActive(false);
+        ChildrenOrGuardianPage.gameObject.SetActive(true);
+        animalScreen.gameObject.SetActive(false);
+        TaskScreen.gameObject.SetActive(false);
+        tutorial2.gameObject.SetActive(false);
+        tutorial3.gameObject.SetActive(false);
     }
 
     public void toParentPage()

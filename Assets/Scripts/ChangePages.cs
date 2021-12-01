@@ -10,6 +10,9 @@ public class ChangePages : MonoBehaviour
     bool showImages3 = false;
     [SerializeField] private GameObject tutorialSCreen;
     [SerializeField]  Image[] tutorialButtons;
+    [SerializeField] private GameObject approved;
+    [SerializeField] private GameObject disproved;
+    [SerializeField] private GameObject parrotScreen;
     [SerializeField] private GameObject kidsScreen;
     [SerializeField] private GameObject secondKidScreen;
     [SerializeField] private GameObject goKidsScreen;
@@ -46,6 +49,18 @@ public class ChangePages : MonoBehaviour
     private string Parrot = "parrot";
 
 
+    public void Approved()
+    {
+        parrotScreen.gameObject.SetActive(false);
+        approved.gameObject.SetActive(true);
+    }
+
+    public void disproved2()
+    {
+        parrotScreen.gameObject.SetActive(false);
+        disproved.gameObject.SetActive(true);
+    }
+
     public void TapToScanButton()
     {
         TapToScanPage.gameObject.SetActive(false);
@@ -56,6 +71,15 @@ public class ChangePages : MonoBehaviour
     {
         ChildrenOrGuardianPage.gameObject.SetActive(false);
         bothPanelScreen.gameObject.SetActive(true);
+    }
+
+    public void goParrot()
+    {
+        parrotScreen.gameObject.SetActive(true);
+        goKidsScreen.gameObject.SetActive(false);
+        kidsScreen.gameObject.SetActive(false);
+        secondKidScreen.gameObject.SetActive(false);
+        
     }
     public void TapForGuardian()
     {

@@ -8,7 +8,10 @@ public class ChangePages : MonoBehaviour
     bool showImages1 = false;
     bool showImages2 = false;
     bool showImages3 = false;
+    [SerializeField] private GameObject tutorialSCreen;
     [SerializeField]  Image[] tutorialButtons;
+    [SerializeField] private GameObject goKidsScreen;
+    [SerializeField] private GameObject welcomeParentScreen;
     [SerializeField] private GameObject animalScreenKids;
     [SerializeField] private GameObject startParentScreen;
     [SerializeField] private GameObject charityScreen;
@@ -127,6 +130,22 @@ public class ChangePages : MonoBehaviour
         bothPanelScreen.gameObject.SetActive(true);
     }
 
+    public void KidsScreeny()
+    {
+
+        startParentScreen.gameObject.SetActive(false);
+        charityScreen.gameObject.SetActive(false);
+        animalScreen.gameObject.SetActive(false);
+        goKidsScreen.gameObject.SetActive(true);
+    }
+
+    public void goParentMap()
+    {
+        startParentScreen.gameObject.SetActive(true);
+        charityScreen.gameObject.SetActive(false);
+        animalScreen.gameObject.SetActive(false);
+        goKidsScreen.gameObject.SetActive(false);
+    }
     public void backToMapOrAnimalScreen()
     {
         mapOrAnimalScreen.gameObject.SetActive(true);
@@ -151,6 +170,7 @@ public class ChangePages : MonoBehaviour
         {
             ChildrenOrGuardianPage.gameObject.SetActive(false);
             WelcomeGuardianPage.gameObject.SetActive(true);
+            tutorialSCreen.gameObject.SetActive(false);
         }
     }
 

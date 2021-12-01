@@ -11,6 +11,9 @@ public class ChangePages : MonoBehaviour
     bool mapChanged = false;
     [SerializeField] private GameObject tutorialSCreen;
     [SerializeField]  Image[] tutorialButtons;
+    [SerializeField] private GameObject dialogue1;
+    [SerializeField] private GameObject dialogue2;
+    [SerializeField] private GameObject dialogue3;
     [SerializeField] private GameObject mapPic;
     [SerializeField] private GameObject mapINfo;
     [SerializeField] private GameObject kidsMapScreen;
@@ -339,6 +342,12 @@ public class ChangePages : MonoBehaviour
 
     }
 
+    public void Activate2()
+    {
+        StartCoroutine(wait2());
+
+    }
+
     public void MapOrAnimal()
     {
         bothPanelScreen.gameObject.SetActive(false);
@@ -424,5 +433,24 @@ public class ChangePages : MonoBehaviour
         firstScreen.gameObject.SetActive(false);
 
         secondScreen.gameObject.SetActive(true);
+    }
+
+    IEnumerator wait2()
+    {
+        dialogue1.gameObject.SetActive(true);
+        yield return new WaitForSecondsRealtime(transitionSpeed);
+        dialogue1.gameObject.SetActive(false);
+
+        dialogue2.gameObject.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(transitionSpeed);
+        dialogue2.gameObject.SetActive(false);
+        dialogue3.gameObject.SetActive(true);
+
+
+        yield return new WaitForSecondsRealtime(transitionSpeed);
+
+        dialogue3.gameObject.SetActive(false);
+        dialogue1.gameObject.SetActive(true);
     }
 }

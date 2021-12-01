@@ -11,6 +11,10 @@ public class ChangePages : MonoBehaviour
     bool mapChanged = false;
     [SerializeField] private GameObject tutorialSCreen;
     [SerializeField]  Image[] tutorialButtons;
+    [SerializeField] private GameObject thirdAnimalScreen;
+    [SerializeField] private GameObject firstAnimalScreen;
+    [SerializeField] private GameObject secondAnimalScreen;
+    [SerializeField] private GameObject parrotSeconcScreen;
     [SerializeField] private GameObject dialogue1;
     [SerializeField] private GameObject dialogue2;
     [SerializeField] private GameObject dialogue3;
@@ -203,6 +207,8 @@ public class ChangePages : MonoBehaviour
         charityScreen.gameObject.SetActive(false);
         animalScreen.gameObject.SetActive(false);
         goKidsScreen.gameObject.SetActive(false);
+        approved.gameObject.SetActive(false);
+        disproved.gameObject.SetActive(false);
     }
 
     public void KidsScreeny()
@@ -212,6 +218,8 @@ public class ChangePages : MonoBehaviour
         charityScreen.gameObject.SetActive(false);
         animalScreen.gameObject.SetActive(false);
         goKidsScreen.gameObject.SetActive(true);
+        approved.gameObject.SetActive(false);
+        disproved.gameObject.SetActive(false);
     }
 
     public void goParentMap()
@@ -221,6 +229,8 @@ public class ChangePages : MonoBehaviour
         charityScreen.gameObject.SetActive(false);
         animalScreen.gameObject.SetActive(false);
         goKidsScreen.gameObject.SetActive(false);
+        approved.gameObject.SetActive(false);
+        disproved.gameObject.SetActive(false);
     }
     public void backToMapOrAnimalScreen()
     {
@@ -230,7 +240,9 @@ public class ChangePages : MonoBehaviour
         TaskScreen.gameObject.SetActive(false);
         tutorial2.gameObject.SetActive(false);
         tutorial3.gameObject.SetActive(false);
-        kidsMapScreen.gameObject.SetActive(false);  
+        kidsMapScreen.gameObject.SetActive(false);
+        approved.gameObject.SetActive(false);
+        disproved.gameObject.SetActive(false);
     }
 
     public void GoToKidsScreenMap()
@@ -270,6 +282,25 @@ public class ChangePages : MonoBehaviour
         tutorial2.gameObject.SetActive(false);
         tutorial3.gameObject.SetActive(false);
         kidsMapScreen.gameObject.SetActive(false);
+        approved.gameObject.SetActive(false);
+        disproved.gameObject.SetActive(false);
+    }
+
+    public void secondAnimalPage()
+    {
+        firstAnimalScreen.gameObject.SetActive(false);
+        secondAnimalScreen.gameObject.SetActive(true);
+    }
+
+    public void thirdAnimalPage()
+    {
+        secondAnimalScreen.gameObject.SetActive(false);
+        thirdAnimalScreen.gameObject.SetActive(true);
+    }
+    public void fromMapToAnimal()
+    {
+        kidsMapScreen.gameObject.SetActive(false);
+        animalScreen.gameObject.SetActive(true);
     }
 
     public void toParentPage()
@@ -365,6 +396,12 @@ public class ChangePages : MonoBehaviour
         BEAR, 
         ZEBRA,
         DOLPHIN
+    }
+
+    public void secondParrotPage()
+    {
+        parrotInfoPage.gameObject.SetActive(false);
+        parrotSeconcScreen.gameObject.SetActive(true);
     }
     
     public void PickAnimal(int someValue)

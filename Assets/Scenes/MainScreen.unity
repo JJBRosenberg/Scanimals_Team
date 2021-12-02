@@ -3393,7 +3393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &94396474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10214,7 +10214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &274718649
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11693,7 +11693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &311467589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58898,7 +58898,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -7, y: 94}
-  m_SizeDelta: {x: 160, y: 160}
+  m_SizeDelta: {x: 171.88, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490114724
 MonoBehaviour:
@@ -58933,7 +58933,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hallo, Ik heet Jelly
+  m_Text: Hallo, Ik heet Sunny
 --- !u!222 &1490114725
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -34,6 +34,16 @@ public class quizDisplay : MonoBehaviour
     {
         if(value == answerNumber)
         {
+            if(value == 1)
+            {
+                QuizAnswer1.GetComponent<Image>().color = Color.green;
+            } else if (value == 2)
+            {
+                QuizAnswer2.GetComponent<Image>().color = Color.green;
+            } else if (value == 3)
+            {
+                QuizAnswer3.GetComponent<Image>().color = Color.green;
+            }
             RightOrWrong.text = ("Correct");
             goNext.gameObject.SetActive(true);
         } else

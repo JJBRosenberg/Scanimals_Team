@@ -15,6 +15,6 @@ MonoBehaviour:
   QuizQuestion: Is een Jachtluipaar een bedreigt diersoort?
   AnswerOne: Ja
   AnswerTwo: Nee
-  AnswerThree: idk
+  AnswerThree: Weet ik niet
   answerNumber: 1
   nextPage: {fileID: 0}

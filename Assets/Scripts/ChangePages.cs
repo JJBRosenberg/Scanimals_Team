@@ -248,6 +248,7 @@ public class ChangePages : MonoBehaviour
     }
     public void backToMapOrAnimalScreen()
     {
+        quizScreen.gameObject.SetActive(false);
         ChildrenOrGuardianPage.gameObject.SetActive(false);
         mapOrAnimalScreen.gameObject.SetActive(true);
         animalScreen.gameObject.SetActive(false);
@@ -288,7 +289,7 @@ public class ChangePages : MonoBehaviour
 
     public void tochildrenOrGuardianPage()
     {
-
+        quizScreen.gameObject.SetActive(false);
         ChildrenOrGuardianPage.gameObject.SetActive(false);
         ChildrenOrGuardianPage.gameObject.SetActive(true);
         animalScreen.gameObject.SetActive(false);

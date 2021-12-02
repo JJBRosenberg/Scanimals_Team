@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6cc62054aa6f940835ff2e7b6c5bfe, type: 3}
   m_Name: Quiz 9
   m_EditorClassIdentifier: 
-  QuizQuestion: 'Hoelang kan een struisvogel zijn topsnelheid '
+  QuizQuestion: 'Hoelang kan een struisvogel zijn topsnelheid? '
   AnswerOne: '30 minuten '
   AnswerTwo: '1 uur '
   AnswerThree: 4 uur

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6cc62054aa6f940835ff2e7b6c5bfe, type: 3}
   m_Name: Quiz 11
   m_EditorClassIdentifier: 
-  QuizQuestion: 'Wat voor geluit maakt een stokstaartje? '
+  QuizQuestion: 'Wat voor geluid maakt een stokstaartje? '
   AnswerOne: Ze blaffen en fluiten
   AnswerTwo: Ze piepen
   AnswerThree: Ze kunnen alleen blaffen

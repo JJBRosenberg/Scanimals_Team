@@ -15,6 +15,6 @@ MonoBehaviour:
   QuizQuestion: Kan een schaap overeind komen als hij op zijn rug ligt?
   AnswerOne: 'Ja '
   AnswerTwo: 'Nee '
-  AnswerThree: idk
+  AnswerThree: Weet ik niet
   answerNumber: 2
   nextPage: {fileID: 0}

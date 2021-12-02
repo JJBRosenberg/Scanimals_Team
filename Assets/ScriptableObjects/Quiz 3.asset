@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb6cc62054aa6f940835ff2e7b6c5bfe, type: 3}
-  m_Name: Parrot1stQuiz
+  m_Name: Quiz 3
   m_EditorClassIdentifier: 
-  QuizQuestion: How many Parrots Exist
-  AnswerOne: 1
-  AnswerTwo: 2
-  AnswerThree: 3
+  QuizQuestion: Waar komen raven niet voor?
+  AnswerOne: Noord-Amerika
+  AnswerTwo: Noordpool
+  AnswerThree: Europa
   answerNumber: 2
+  nextPage: {fileID: 0}

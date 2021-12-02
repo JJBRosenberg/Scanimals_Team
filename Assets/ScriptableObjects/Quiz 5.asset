@@ -15,6 +15,6 @@ MonoBehaviour:
   QuizQuestion: 'Waarom heeft een zebra strepen? '
   AnswerOne: 'Om elkaar te herkennen '
   AnswerTwo: Omdat ze het mooi vinden
-  AnswerThree: m hun vijand te verwarren en camofleren
+  AnswerThree: Om hun vijand te verwarren en camofleren
   answerNumber: 3
   nextPage: {fileID: 0}

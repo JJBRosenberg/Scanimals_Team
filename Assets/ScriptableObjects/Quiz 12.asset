@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6cc62054aa6f940835ff2e7b6c5bfe, type: 3}
   m_Name: Quiz 12
   m_EditorClassIdentifier: 
-  QuizQuestion: 'Wat is de favoerite boom van een giraffe? '
+  QuizQuestion: 'Wat is de favoriete boom van een giraffe? '
   AnswerOne: 'Eiken boom '
   AnswerTwo: Acacia boom
   AnswerThree: Dennen boom

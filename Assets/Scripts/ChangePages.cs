@@ -289,6 +289,7 @@ public class ChangePages : MonoBehaviour
 
     public void tochildrenOrGuardianPage()
     {
+        welcomeParentScreen.gameObject.SetActive(false);
         quizScreen.gameObject.SetActive(false);
         ChildrenOrGuardianPage.gameObject.SetActive(false);
         ChildrenOrGuardianPage.gameObject.SetActive(true);

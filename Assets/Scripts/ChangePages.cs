@@ -11,6 +11,7 @@ public class ChangePages : MonoBehaviour
     bool mapChanged = false;
     [SerializeField] private GameObject tutorialSCreen;
     [SerializeField]  Image[] tutorialButtons;
+    [SerializeField] private GameObject realParrotBackground;
     [SerializeField] private GameObject medaile;
     [SerializeField] private GameObject thirdAnimalScreen;
     [SerializeField] private GameObject firstAnimalScreen;
@@ -78,13 +79,13 @@ public class ChangePages : MonoBehaviour
 
     public void Approved()
     {
-        parrotScreen.gameObject.SetActive(false);
+        realParrotBackground.gameObject.SetActive(false);
         approved.gameObject.SetActive(true);
     }
 
     public void disproved2()
     {
-        parrotScreen.gameObject.SetActive(false);
+        realParrotBackground.gameObject.SetActive(false);
         disproved.gameObject.SetActive(true);
     }
 

@@ -79,13 +79,13 @@ public class ChangePages : MonoBehaviour
 
     public void Approved()
     {
-        realParrotBackground.gameObject.SetActive(false);
+        parrotScreen.gameObject.SetActive(false);
         approved.gameObject.SetActive(true);
     }
 
     public void disproved2()
     {
-        realParrotBackground.gameObject.SetActive(false);
+        parrotScreen.gameObject.SetActive(false);
         disproved.gameObject.SetActive(true);
     }
 
@@ -123,6 +123,8 @@ public class ChangePages : MonoBehaviour
 
     public void toCharityScreen()
     {
+        approved.gameObject.SetActive(false);
+        disproved.gameObject.SetActive(false);
         kidsScreen.gameObject.SetActive(false);
         secondKidScreen.gameObject.SetActive(false);
         goKidsScreen.gameObject.SetActive(false);
@@ -134,6 +136,8 @@ public class ChangePages : MonoBehaviour
 
     public void toStartParentScreen()
     {
+        approved.gameObject.SetActive(false);
+        disproved.gameObject.SetActive(false);
         goKidsScreen.gameObject.SetActive(false);
         animalScreenKids.gameObject.SetActive(false);
         startParentScreen.gameObject.SetActive(true);
@@ -233,6 +237,7 @@ public class ChangePages : MonoBehaviour
 
     public void goParentMap()
     {
+        parrotScreen.gameObject.SetActive(false);
         kidsScreen.gameObject.SetActive(false);
         startParentScreen.gameObject.SetActive(true);
         charityScreen.gameObject.SetActive(false);
